@@ -1,5 +1,5 @@
 #include "kalman_filter.h"
-
+#define PI 3.14159265
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
@@ -54,7 +54,11 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   
   VectorXd h = VectorXd(3);
   h << rho,theta,rho_dot;
-  VectorXd y = z-h*x_;
+  VectorXd y = z-h;
+  if( y[1] > PI )
+    y[1] -= 2*PI;
+  if( y[1] < -PI )
+    y[1] += 2*PI;
   MeasurementUpdate(y);
   
 }
@@ -70,5 +74,5 @@ void KalmanFilter::MeasurementUpdate(const VectorXd &y) {
   x_ = x_+ K_*y;
   int xsize = x_.size();
   MatrixXd I = MatrixXd::Identity(xsize,xsize);
-  P_ = (I-K_*H_)*P_;
+  P_ = (I- K_*H_)*P_;
 }

@@ -127,3 +127,9 @@ still be compilable with cmake and make.
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
+## Resources
+
+1. [Kalman Filter- Harveen Singh](https://towardsdatascience.com/kalman-filter-interview-bdc39f3e6cf3)
+2. [Extended Kalman Filter - Harveen Singh](https://towardsdatascience.com/extended-kalman-filter-43e52b16757d)
+3. [How a Kalman filter works, in pictures](https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/)
+4. [Michel van Biezen Youtube Videos](https://www.youtube.com/watch?v=CaCcOwJPytQ&list=PLX2gX-ftPVXU3oUFNATxGXY90AULiqnWT)
